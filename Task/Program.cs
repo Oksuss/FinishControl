@@ -6,3 +6,13 @@ string[] MyString;
 Console.WriteLine("Введите массив строк через запятую"); 
 string stroka = Console.ReadLine(); 
 MyString = stroka.Split(',');
+var result = new string[MyString .Length];
+var realSize = 0;
+foreach (var value in MyString )
+{
+    if (value.Length <= 3)
+    {
+        result[realSize] = value;
+        realSize++;
+    }
+}
